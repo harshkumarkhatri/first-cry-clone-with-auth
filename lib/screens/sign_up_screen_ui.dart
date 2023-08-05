@@ -284,6 +284,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   }
                                 }
                                 try {
+                                  UserCredential _ = await FirebaseAuth.instance
+                                      .createUserWithEmailAndPassword(
+                                          email:
+                                              emailController.text.toString(),
+                                          password: passwordController.text
+                                              .toString());
                                   const snackBar = SnackBar(
                                       content: Text('User Signed up.'));
                                   if (mounted) {

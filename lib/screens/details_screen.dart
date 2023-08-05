@@ -596,10 +596,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
   }
 
   Widget _buildBrandInfo() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.0),
       child: Row(
-        children: const [
+        children: [
           Text(
             "BRAND INFORMATION",
             style: TextStyle(
@@ -622,10 +622,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Row(
-            children: const [
+            children: [
               Text(
                 "SIZE",
                 style: TextStyle(
@@ -695,10 +695,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Row(
-            children: const [
+            children: [
               Icon(
                 Icons.local_shipping_outlined,
               ),
@@ -858,10 +858,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Row(
-            children: const [
+            children: [
               Text(
                 "SIZE INFORMATION & MATERIAL CARE",
                 style: TextStyle(
@@ -1020,9 +1020,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(4),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisSize: MainAxisSize.min,
-                  children: const [
+                  children: [
                     Text(
                       "3 - 4 Y",
                     ),

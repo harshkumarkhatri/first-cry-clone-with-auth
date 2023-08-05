@@ -1,7 +1,5 @@
-import 'dart:developer';
-
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:first_cry_with_auth/screens/details_screen.dart';
+import 'package:first_cry_with_auth/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -219,9 +217,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {
-                            log("forgot my password");
-                          },
+                          onTap: () {},
                           child: Padding(
                             padding: const EdgeInsets.only(
                               top: 12,
@@ -268,7 +264,26 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                             onTap: () async {
-                              log("Checking creds");
+                              if (usernameController.text == '') {
+                                const snackBar = SnackBar(
+                                  content: Text(
+                                    "Please Enter email to continue",
+                                  ),
+                                );
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(snackBar);
+                                return;
+                              }
+                              if (passwordController.text == '') {
+                                const snackBar = SnackBar(
+                                  content: Text(
+                                    "Please Enter password to continue",
+                                  ),
+                                );
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(snackBar);
+                                return;
+                              }
                               setState(() {
                                 _isLoading = true;
                               });
@@ -328,7 +343,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Navigator.push(
                                     context,
                                     (MaterialPageRoute(
-                                      builder: (_) => const DetailsScreen(),
+                                      builder: (_) => const HomeScreen(),
                                     )),
                                   );
                                 }
@@ -343,7 +358,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                   _isLoading = false;
                                 });
                               } catch (e) {
-                                log("inside $e");
+                                final snackBar = SnackBar(content: Text('$e'));
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(snackBar);
                               }
                             })
                       ],
