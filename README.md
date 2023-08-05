@@ -1,6 +1,14 @@
-# first_cry_with_auth
+# First cry Clone with Auth
 
-A new Flutter project.
+A mini project developed as an assignment.
+
+Things included: 
+* Firebase authentication(for android) with sliding page ui for opening signup and login page.
+* Home screen for FirstCry app.
+* Details screen for FirstCry app.
+
+### Video for the implementation
+
 
 ## Getting Started
 
