@@ -8,6 +8,8 @@ Things included:
 * Details screen for FirstCry app.
 
 ### Video for the implementation
+https://github.com/harshkumarkhatri/first-cry-clone-with-auth/assets/42743629/178b28d9-212c-4615-8e6a-baaa062b48e7
+
 
 
 ## Getting Started
